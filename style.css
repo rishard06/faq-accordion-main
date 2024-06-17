@@ -44,15 +44,14 @@ h1 {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  /* gap: 20px; */
   width: 100%;
   cursor: pointer;
   text-align: left;
-  outline: solid red;
+  /* outline: solid red; */
 }
 
 section .con:not(:last-child) {
-  margin-bottom: 10px;
+  padding-bottom: 15px;
   border-bottom: 2px solid hsl(275, 100%, 97%);
 }
 
@@ -85,8 +84,8 @@ section .con:not(:last-child) {
 
 .ans {
   background-color: white;
-  /* max-height: 0; */
-  /* overflow: hidden; */
+  max-height: 0;
+  overflow: hidden;  
   transition: max-height 200ms ease;
 }
 
@@ -98,7 +97,13 @@ section .con:not(:last-child) {
   color: hsl(292, 16%, 49%);
 }
 
-@media (max-width: 540px) {
+@media (max-width: 500px) {
+  section {
+    min-width: 400px;
+  }
+}
+
+@media (max-width: 375px) {
   body {
     background-image: url(assets/images/background-pattern-mobile.svg);
   }
